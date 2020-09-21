@@ -27,7 +27,11 @@
 
 ## Simulations
 
-Polydisperse simulations with 3 grain sizes
+Five polydisperse simulations with 3 grain sizes based on the experimental set-up and the numerical configuration of:
+
+* Lamb, M.P., McElroy, B., Kopriva, B., Shaw, J. and Mohrig, D., 2010. "Linking river-flood dynamics to hyperpycnalplume deposits: Experiments, theory, and geological implications". [Geological Society of America Bulletin, Vol. 122, No. 9-10, pp. 1389–1400](https://doi.org/10.1130/B30125.1);
+
+* Schuch, F.N., Pinto, L.C., Silvestrini, J.H. and Laizet, S., 2018. "Three-dimensional turbulence-resolving simulations of the plunge phenomenon in a tilted channel". [Journal of Geophysical Research: Oceans, Vol. 123, pp. 1–13](https://doi.org/10.1029/2018JC014027).
 
 | Cases | 2 | 4 | 5 | 6 | 7 |
 |-------|---|---|---|---|---|
@@ -37,7 +41,7 @@ Polydisperse simulations with 3 grain sizes
 | Initial densimetric Froude Number | 17.81 | 8.45 | 11.16 | 14.54 | 11.68 |
 
 
-## Dataset
+## Dataset (to apear soon at Zenodo.org)
 
 Data from the five simulations are included (cases 2, 4, 5, 6, and 7). The output files from Xcompact3d were converted to `NetCDF` aiming to be more friendly than raw binaries, they include data arrays together with metadata and the coordinates:
 
@@ -49,22 +53,34 @@ Data from the five simulations are included (cases 2, 4, 5, 6, and 7). The outp
 
 Due to limitations at the storage size, the time sampling is smaller for larger files. There are four files for each simulated case:
 
-* `3d-case-<num>.nc`: Complete 3D snapshot at 12 different dimensionless time (250, 500, 750, 1,000, 1,250, 1,500, 1,750, 2,000, 3,000, 4,000, 5,000, 6,000), the arrays are:
+* `3d-case-<num>.nc`: Complete 3D snapshot at 12 different dimensionless times (250, 500, 750, 1,000, 1,250, 1,500, 1,750, 2,000, 3,000, 4,000, 5,000, 6,000), the arrays are:
   - `ux (x,y,z,t)`: Streamwise velocity;
   - `uy (x,y,z,t)`: Vertical velocity;
   - `uz (x,y,z,t)`: Spanwise velocity;
-  - `phi (x,y,z,n,t)`: Concentration fields.
-* `xy-planes-case-<num>.nc`
-* `xz-planes-case-<num>.nc`
-* `LA-case-<num>.nc`:
-  - `Layer-averaged Uh (x,t)`
-  - `Layer-averaged U2h (x,t)`
-  - `Layer-averaged UCh (x,n,t)`
-  - `utau (x,t)`
-  - `dep (x,n,t)`
+  - `phi (x,y,z,n,t)`: Concentration.
+* `xy-planes-case-<num>.nc`: Spanwise-averaged quantities with a timestep of 5 dimensionless units:
+  - `ux (x,y,t)`: Streamwise velocity;
+  - `uy (x,y,t)`: Vertical velocity;
+  - `uz (x,y,t)`: Spanwise velocity;
+  - `phi (x,y,n,t)`: Concentration.
+* `xz-planes-case-<num>.nc`: Depth-averaged quantities with a timestep of 5 dimensionless units:
+  - `ux (x,z,t)`: Streamwise velocity;
+  - `uy (x,z,t)`: Vertical velocity;
+  - `uz (x,z,t)`: Spanwise velocity;
+  - `phi (x,z,n,t)`: Concentration.
+* `LA-case-<num>.nc`: The complete spatio-temporal analysis of the relevant quantities is possible in a layer-averaged context per width unit, it is based on three variables:
+  - `Layer-averaged Uh (x,t)`;
+  - `Layer-averaged U2h (x,t)`;
+  - `Layer-averaged UCh (x,n,t)`;
+
+  that can be used to compute layer-averaged velocity `U = U2h/Uh`, flow depth `H = (Uh)²/U2h`, flow discharge `Q = Uh`, concentration `C = UCh/Uh` and local densimetric Froude number `Fr`. In addition to:
+  - `utau (x,t)`: Spanwise-averaged bed shear velocity;
+  - `dep (x,n,t)`: Spanwise-averaged deposition rate.
+
+  All arrays with a timestep of 2.5 dimensionless units.
+
+Each file can be loaded with the Python package [xarray](http://xarray.pydata.org/en/stable/) (see [Why xarray](http://xarray.pydata.org/en/stable/why-xarray.html)), for instance:
 
 ```python
 dataset = xr.load_dataset("filename")
 ```
-
-## Examples
