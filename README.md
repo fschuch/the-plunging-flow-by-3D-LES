@@ -90,7 +90,7 @@ dataset = xr.load_dataset("filename")
 
 * [00-LA-and-Convert-to-NetCDF.ipynb](http://nbviewer.jupyter.org/github/fschuch/the-plunging-flow-by-3D-LES/blob/master/00-LA-and-Convert-to-NetCDF.ipynb) -- This Notebook is presented only for reference, it was used to compute the layer-averaged quantities and to convert the raw binary data from Xcompact3d to NetCDF. These files are available at [Zenodo](https://doi.org/10.5281/zenodo.3968993);
 
-* [01-Computing-and-Plotting.ipynb](http://nbviewer.jupyter.org/github/fschuch/the-plunging-flow-by-3D-LES/blob/master01-Computing-and-Plotting.ipynb) -- This Notebook shows how to read, compute and plot the variables presented in our work.
+* [01-Computing-and-Plotting.ipynb](http://nbviewer.jupyter.org/github/fschuch/the-plunging-flow-by-3D-LES/blob/master/01-Computing-and-Plotting.ipynb) -- This Notebook shows how to read, compute and plot the variables presented in our work.
 
 ## Setup
 
