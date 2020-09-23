@@ -24,6 +24,7 @@
 * Publication (PDF): To appear soon at conference proceedings.
 * Flow visualization: https://youtu.be/rUDY5UI0bG4
 * Talk: https://youtu.be/n08U9l1Pgis
+* Slides: https://prezi.com/view/2WGA1sVCm08ZNLpOlERO/
 
 ## Simulations
 
@@ -83,4 +84,32 @@ Each file can be loaded with the Python package [xarray](http://xarray.pydata.or
 
 ```python
 dataset = xr.load_dataset("filename")
+```
+
+## Examples
+
+* [00-LA-and-Convert-to-NetCDF.ipynb](http://nbviewer.jupyter.org/github/fschuch/the-plunging-flow-by-3D-LES/blob/master/00-LA-and-Convert-to-NetCDF.ipynb) -- This Notebook is presented only for reference, it was used to compute the layer-averaged quantities and to convert the raw binary data from Xcompact3d to NetCDF. These files are available at [Zenodo](https://doi.org/10.5281/zenodo.3968993);
+
+* [01-Computing-and-Plotting.ipynb](http://nbviewer.jupyter.org/github/fschuch/the-plunging-flow-by-3D-LES/blob/master01-Computing-and-Plotting.ipynb) -- This Notebook shows how to read, compute and plot the variables presented in our work.
+
+## Setup
+
+The examples above are only rendered online, if you choose to install and run them locally, follow these steps:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/fschuch/the-plunging-flow-by-3D-LES.git
+```
+
+2. Install the environment. This repository includes an [`environment.yaml`](.binder/environment.yaml) file containing a list of the requirements to run the examples. To install them with conda run:
+```bash
+conda env create -f .binder/environment.yml
+conda activate plunging-flow-analysis
+```
+
+3. Download the data files from [Zenodo](https://doi.org/10.5281/zenodo.3968993) to the root folder of this repository.
+
+4. Start a Jupyter session:
+```bash
+jupyter lab
 ```
