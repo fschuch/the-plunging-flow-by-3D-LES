@@ -113,3 +113,9 @@ conda activate plunging-flow-analysis
 ```bash
 jupyter lab
 ```
+
+## Copyright and License
+
+Copyright (c) 2020, Felipe N. Schuch. All content in this repository is under Creative Commons Attribution [CC-BY 4.0](https://opensource.org/licenses/BSD-3-Clause), and all [code is under BSD-3 clause](https://github.com/fschuch/the-plunging-flow-by-3D-LES/blob/master/LICENSE).
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
