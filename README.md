@@ -21,7 +21,7 @@
 
 ![3d view](./assets/figures/3d-view.png "Instantaneous volumetric visualization of the total concentration fiels for case 4, at time equals to 1,000.")
 
-* Publication (PDF): To appear soon at conference proceedings.
+* Publication (PDF): [Download full-text](https://www.researchgate.net/publication/353719585_The_Plunging_of_Hyperpycnal_Plumes_on_Tilted_Bed_by_Three-Dimensional_Large-Eddy_Simulations)
 * Flow visualization: https://youtu.be/rUDY5UI0bG4
 * Talk: https://youtu.be/n08U9l1Pgis
 * Slides: https://prezi.com/view/2WGA1sVCm08ZNLpOlERO/
