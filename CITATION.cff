@@ -1,5 +1,4 @@
 cff-version: 1.2.0
-type: dataset
 message: "If you use this dataset, please cite it as below."
 authors:
   - family-names: "Schuch"
@@ -40,3 +39,4 @@ preferred-citation:
   title: "The Plunging of Hyperpycnal Plumes on Tilted Bed by Three-Dimensional Large-Eddy Simulations"
   year: 2020
   url: "https://github.com/fschuch/the-plunging-flow-by-3D-LES"
+  doi: 10.5281/zenodo.3968993
