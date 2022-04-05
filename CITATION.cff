@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+authors:
+  - family-names: "Schuch"
+    given-names: "Felipe"
+    orcid: "https://orcid.org/0000-0002-6140-0273"
+  - family-names: "Meiburg"
+    given-names: "Eckart"
+    orcid: "https://orcid.org/0000-0003-3670-8193"
+  - family-names: "Laizet"
+    given-names: "Sylvain"
+    orcid: "https://orcid.org/0000-0003-0346-0662"
+  - family-names: "Silvestrini"
+    given-names: "Jorge"
+    orcid: "https://orcid.org/0000-0001-9929-9302"
+title: "The Plunging of Hyperpycnal Plumes on Tilted Bed by Three-Dimensional Large-Eddy Simulations"
+version: 1.0
+doi: 10.5281/zenodo.3968993
+date-released: 2020-09-21
+url: "https://github.com/fschuch/the-plunging-flow-by-3D-LES"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Schuch"
+      given-names: "Felipe"
+      orcid: "https://orcid.org/0000-0002-6140-0273"
+    - family-names: "Silvestrini"
+      given-names: "Jorge"
+      orcid: "https://orcid.org/0000-0001-9929-9302"
+    - family-names: "Meiburg"
+      given-names: "Eckart"
+      orcid: "https://orcid.org/0000-0003-3670-8193"
+    - family-names: "Laizet"
+      given-names: "Sylvain"
+      orcid: "https://orcid.org/0000-0003-0346-0662"
+  booktitle: "12th Spring School on Transition and Turbulence"
+  organization: "ABCM"
+  adress = "Blumenau, SC, Brazil"
+  title: "The Plunging of Hyperpycnal Plumes on Tilted Bed by Three-Dimensional Large-Eddy Simulations"
+  year: 2020
+  url: "https://github.com/fschuch/the-plunging-flow-by-3D-LES"
